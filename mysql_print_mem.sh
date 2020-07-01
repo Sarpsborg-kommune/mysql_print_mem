@@ -17,5 +17,12 @@ MEM_TOTAL_MIN=BASE_MEM + MEM_PER_CONN*MAX_USED_CONN
 MEM_TOTAL_MAX=BASE_MEM + MEM_PER_CONN*MAX_CONN
 
 printf "+--------------------------------+-------------------------------------+\n"
-printf "| %40s | %15.3f MB |\n", "key_buffer_size", VAR["key_buffer_size"]/1048576
+printf "| %30s | %15.3f MB |\n", "key_buffer_size", VAR["key_buffer_size"]/1048576
+printf "| %30s | %15.3f MB |\n", "query_cache_size", VAR["query_cache_size"]/1048576
+printf "| %30s | %15.3f MB |\n", "innodb_buffer_pool_size", VAR["innodb_buffer_pool_size"]/1048576
+printf "| %30s | %15.3f MB |\n", "innodb_additional_mem_pool_size", VAR["innodb_additional_mem_pool_size"]/1048576
+printf "| %30s | %15.3f MB |\n", "innodb_log_buffer_size", VAR["innodb_log_buffer_size"]/1048576
+printf "+--------------------------------+-------------------------------------+\n"
+printf "| %30s | %15.3f MB |\n", "BASE MEMORY", BASE_MEM/1048576
+printf "+--------------------------------+-------------------------------------+\n"
 }'
